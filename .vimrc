@@ -101,6 +101,6 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 " disable the toolbar in MacVim
 if has("gui_running")
-    set guioptions=egmrt
+	set guioptions=egmrt
 endif
 
