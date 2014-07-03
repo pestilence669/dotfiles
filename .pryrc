@@ -1,4 +1,6 @@
-Pry.config.editor = 'subl -n -w'
+# vim: set ts=2 sw=2 et:
+# Pry will default to $EDITOR without this override...
+# Pry.config.editor = 'vim'
 
 # https://github.com/kyrylo/pry-theme
 # $ gem install pry-theme
