@@ -1,3 +1,5 @@
+# vim: set ts=4 sw=4 noet:
+
 export PATH="/usr/local/bin:$PATH"
 
 # Path to the bash it configuration
