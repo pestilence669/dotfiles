@@ -1,4 +1,6 @@
+#!/usr/bin/env python
 # vim: set ts=4 sw=4 noet filetype=python:
+
 import readline, rlcompleter
 readline.parse_and_bind('tab: complete')
 
