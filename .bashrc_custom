@@ -1,3 +1,8 @@
 # vim set ts=4 sw=4 noet:
 
 export PYTHONSTARTUP="$HOME/.pyrc"
+
+# helper scripts for running Mocha tests invoked from a Makefile
+function tt() { if [ -n "$1" ]; then MOCHA_FLAGS="-g $1" make test; else make test; fi; }
+function ttw() { if [ -n "$1" ]; then MOCHA_FLAGS="-g $1" make test-w; else make test-w; fi; }
+
