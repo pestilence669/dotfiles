@@ -71,6 +71,15 @@ set wildignore+=*.pyc,*.obj,*.o,.svn/**,.git/**
 " ignore CMake files
 set wildignore+=*.cmake,CMakeCache.txt,CMakeFiles/**,Testing/**
 
+" ignore Node.js artifacts
+set wildignore+=node_modules/**,coverage/**
+
+" ignore images
+set wildignore+=*.png,*.gif,*.jpg,*.jpeg,*.ico
+
+" ignore fonts
+set wildignore+=*.otf,*.woff,*.eot,*.ttf
+
 " map grep next & previous
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
@@ -89,6 +98,7 @@ nnoremap <C-l> <C-w><Right><C-w>_
 
 " map quick close w/ auto window zoom & quick save
 map <leader>q :q<cr><C-w>_
+map <leader>Q :qa!<cr>
 map <leader>w :w<cr>
 
 " enable Omni completion
@@ -99,6 +109,9 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
+
+" map JSON to JavaScript
+autocmd BufRead,BufNewFile *.json setfiletype javascript
 
 " disable the toolbar in MacVim
 if has("gui_running")
