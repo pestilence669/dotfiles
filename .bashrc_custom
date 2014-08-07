@@ -1,5 +1,6 @@
 # vim set ts=4 sw=4 noet:
 
+export EDITOR=vim
 export PYTHONSTARTUP="$HOME/.pyrc"
 
 # helper scripts for running Mocha tests invoked from a Makefile
