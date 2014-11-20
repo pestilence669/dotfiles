@@ -1,5 +1,7 @@
 # vim: set ts=4 sw=4 noet:
 
+. ~/.bashrc
+
 export PATH="/usr/local/bin:$PATH"
 
 # Path to the bash it configuration
@@ -13,4 +15,3 @@ source $BASH_IT/bash_it.sh
 
 # More custom shit
 . ~/.bashrc_custom
-
