@@ -11,3 +11,9 @@ if [[ -x /usr/local/bin/most ]]; then export PAGER="/usr/local/bin/most -s"; fi
 function tt() { if [ -n "$1" ]; then MOCHA_FLAGS="-g $1" make test; else make test; fi; }
 function ttw() { if [ -n "$1" ]; then MOCHA_FLAGS="-g $1" make test-w; else make test-w; fi; }
 
+# Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/
+export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
+if [ -d "$GHC_DOT_APP" ]; then
+	export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
+fi
+
