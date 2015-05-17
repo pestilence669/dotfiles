@@ -3,6 +3,9 @@
 export EDITOR=vim
 export PYTHONSTARTUP="$HOME/.pyrc"
 
+# if moving node's path out of homebrew's evil control, use it
+if [[ -x ~/.node/bin ]]; then export PATH="$HOME/.node/bin:$PATH"; fi
+
 # use most, instead of more or less. it colorizes output for manpages & such
 if [[ -x /usr/bin/most ]]; then export PAGER="/usr/bin/most -s"; fi
 if [[ -x /usr/local/bin/most ]]; then export PAGER="/usr/local/bin/most -s"; fi
@@ -16,4 +19,7 @@ export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
 if [ -d "$GHC_DOT_APP" ]; then
 	export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
+
+# common aliases of laziness
+alias cw='cd ~/workspace'
 
