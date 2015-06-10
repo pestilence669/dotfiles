@@ -22,4 +22,5 @@ fi
 
 # common aliases of laziness
 alias cw='cd ~/workspace'
+alias ll='ls -la'
 
