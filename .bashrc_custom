@@ -24,4 +24,5 @@ fi
 alias cw='cd ~/workspace'
 alias l='ls'
 alias ll='ls -la'
+alias fucking='sudo'
 
