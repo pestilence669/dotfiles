@@ -26,3 +26,6 @@ alias l='ls'
 alias ll='ls -la'
 alias fucking='sudo'
 
+# setting up default Node.js environment
+NODE_ENV=development
+
