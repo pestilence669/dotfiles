@@ -10,6 +10,9 @@ if [[ -x ~/.node/bin ]]; then export PATH="$HOME/.node/bin:$PATH"; fi
 if [[ -x /usr/bin/most ]]; then export PAGER="/usr/bin/most -s"; fi
 if [[ -x /usr/local/bin/most ]]; then export PAGER="/usr/local/bin/most -s"; fi
 
+# ensure that less will work with ANSI codes, because most won't
+export LESS=-R
+
 # helper scripts for running Mocha tests invoked from a Makefile
 function tt() { if [ -n "$1" ]; then MOCHA_FLAGS="-g $1" make test; else make test; fi; }
 function ttw() { if [ -n "$1" ]; then MOCHA_FLAGS="-g $1" make test-w; else make test-w; fi; }
