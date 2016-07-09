@@ -16,6 +16,10 @@ set is
 set hls
 set ic
 
+" enable modelines
+set modeline
+set modelines=5
+
 " enable omnifunc
 filetype plugin on
 
@@ -117,4 +121,7 @@ autocmd BufRead,BufNewFile *.json setfiletype javascript
 if has("gui_running")
 	set guioptions=egmrt
 endif
+
+" load pathogen
+execute pathogen#infect()
 
