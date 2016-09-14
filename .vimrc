@@ -16,6 +16,10 @@ set is
 set hls
 set ic
 
+" enable modelines
+set modeline
+set modelines=5
+
 " enable omnifunc
 filetype plugin on
 
