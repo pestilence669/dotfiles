@@ -15,3 +15,7 @@ source $BASH_IT/bash_it.sh
 
 # More custom shit
 . ~/.bashrc_custom
+
+# iterm2 shell integration
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+

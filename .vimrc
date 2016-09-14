@@ -110,6 +110,9 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
+" disable comment completion (annoying as fuck sometimes, esp. when pasting)
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " map JSON to JavaScript
 autocmd BufRead,BufNewFile *.json setfiletype javascript
 
