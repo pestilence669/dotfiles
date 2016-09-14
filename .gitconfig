@@ -1,18 +1,52 @@
-
-[user]
-    name = Paul Chandler
-    email = pestilence669@users.noreply.github.com
-
-[color]
-    diff = auto
-    status = auto
-    branch = auto
-    ui = auto
-
-[push]
-    default = matching
+[alias]
+	stat = status  # old habits
+	st   = status
+	di   = diff
+	ds   = diff --staged
+	a    = add
+	ci   = commit
+	co   = checkout
+	br   = branch
+	sta  = stash
+	lg   = "log --graph --pretty=format:' \
+		%Cred%h%Creset \
+		-%C(yellow)%d%Creset \
+		%s \
+		%Cgreen(%cr) \
+		%C(bold blue)<%an>%Creset' \
+		--abbrev-commit --date=relative"
+	
+	# rebases an upstream repo's changes onto your master and whatever branch
+	gf = "!f() { \
+		BRANCH=`git rev-parse --abbrev-ref HEAD`; \
+		if [ $? -ne 0 ]; then exit -1; fi; \
+		git fetch upstream || exit -1; \
+		if [ $BRANCH != 'master' ]; then git co master; fi; \
+		git pull --rebase upstream master || exit -1; \
+		if [ $BRANCH != 'master' ]; then \
+			git checkout $BRANCH; \
+			git rebase master $BRANCH; \
+		fi; \
+	}; f"
 
 [core]
-    editor = vim
-    pager = less -R
-
+	pager = less -FXRS -x2
+	excludesfile = /Users/paul/.gitignore_global
+	editor = vim
+[apply]
+	whitespace = nowarn
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = true
+[branch]
+	autosetupmerge = true
+[rebase]
+	autosquash = true
+[push]
+	default = simple
+[user]
+	email = pestilence669@users.noreply.github.com
+	name = Paul Chandler
