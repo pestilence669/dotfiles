@@ -1,6 +1,6 @@
 # vim: set ts=4 sw=4 noet:
 
-if [ -x ~/.bashrc ]; then . ~/.bashrc; fi
+if [ -e ~/.bashrc ]; then . ~/.bashrc; fi
 
 export PATH="/usr/local/bin:$PATH"
 
