@@ -32,3 +32,7 @@ fi
 # app engine, if it's there (always assume ~/google_appengine is the SDK)
 if [[ -d "$HOME/google_appengine" ]]; then export PATH="$PATH:~/google_appengine"; fi
 
+# colors
+export CLICOLOR=1
+export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+
