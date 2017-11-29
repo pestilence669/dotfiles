@@ -49,8 +49,8 @@ color abyss
 " - labels
 "
 set laststatus=2 " double-wide
-set statusline=.pablorc\ %f\ %m\ %r%=(byte:\ 0x%B)\ (col:\ %c%V\ line:\ %l/%P)
-hi StatusLine ctermfg=4 ctermbg=6 gui=bold
+set statusline=𝓟\ \ %f\ %m\ %r%=(byte:\ 0x%B)\ (col:\ %c%V\ line:\ %l/%P)
+hi StatusLine NONE guifg=#00e0e0 guibg=#004F88
 
 "
 " Emphasize insert mode with color

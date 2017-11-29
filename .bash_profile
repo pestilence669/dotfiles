@@ -19,3 +19,6 @@ source $BASH_IT/bash_it.sh
 # iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+
+# added by Anaconda3 5.0.0 installer
+export PATH="/Users/paul/anaconda3/bin:$PATH"
