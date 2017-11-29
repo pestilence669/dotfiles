@@ -39,7 +39,7 @@ set nu        " line numbering is bad for copy
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " set a colorscheme that isn't so annoying in MacVim
-color torte
+color abyss
 
 "
 " Tag up the statusline with my special flavor
