@@ -17,8 +17,10 @@ source $BASH_IT/bash_it.sh
 . ~/.bashrc_custom
 
 # iterm2 shell integration
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+test -e "$HOME/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+# bash completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
-# added by Anaconda3 5.0.0 installer
-export PATH="/Users/paul/anaconda3/bin:$PATH"
+# added by Anaconda3 installer
+export PATH="$HOME/anaconda3/bin:$PATH"
