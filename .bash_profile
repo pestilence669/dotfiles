@@ -1,24 +1,33 @@
 # vim: set ts=4 sw=4 noet:
 
-if [ -e ~/.bashrc ]; then . ~/.bashrc; fi
+[ -e ~/.bashrc ] && . ~/.bashrc
 
 export PATH="/usr/local/bin:$PATH"
 
-# Path to the bash it configuration
-export BASH_IT="$HOME/.bash_it"
+if [ -d ~/.bash_it ]; then
+	export BASH_IT=~/.bash_it
+	export BASH_IT_THEME="zork"
+	. $BASH_IT/bash_it.sh
+fi
 
-# Lock and Load a custom theme file
-export BASH_IT_THEME="zork"
-
-# Load Bash It
-source $BASH_IT/bash_it.sh
-
-# More custom shit
-. ~/.bashrc_custom
+# more custom shit
+[ -e ~/.bashrc_custom ] && . ~/.bashrc_custom
 
 # iterm2 shell integration
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+[ -f ~/.iterm2_shell_integration.bash ] && . ~/.iterm2_shell_integration.bash
 
+# CUDA
+[ -d /usr/local/cuda/lib ] && export DYLD_LIBRARY_PATH="/usr/local/cuda/lib:$DYLD_LIBRARY_PATH"
 
-# added by Anaconda3 5.0.0 installer
-export PATH="/Users/paul/anaconda3/bin:$PATH"
+# Anaconda3
+[ -d ~/anaconda3/bin ] && export PATH="$HOME/anaconda3/bin:$PATH"
+
+# gcloud
+[ -f ~/google-cloud-sdk/path.bash.inc ] && . ~/google-cloud-sdk/path.bash.inc
+
+# Bash completion (set locale for errors on macOS)
+export LC_CTYPE=C
+export LANG=C
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+[ -f ~/google-cloud-sdk/completion.bash.inc ] && . ~/google-cloud-sdk/completion.bash.inc
+
