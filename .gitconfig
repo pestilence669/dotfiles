@@ -52,3 +52,8 @@
 [user]
 	email = pestilence669@users.noreply.github.com
 	name = Paul Chandler
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
