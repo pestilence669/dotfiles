@@ -26,8 +26,11 @@ fi
 [ -f ~/google-cloud-sdk/path.bash.inc ] && . ~/google-cloud-sdk/path.bash.inc
 
 # Bash completion (set locale for errors on macOS)
-export LC_CTYPE=C
-export LANG=C
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+#export LC_CTYPE=C
+#export LANG=C
+PREFIX=${PREFIX:-/usr}
+for p in "$PREFIX" "$PREFIX/local"; do
+	[ -f "$p"/etc/bash_completion ] && . "$p"/etc/bash_completion
+done
 [ -f ~/google-cloud-sdk/completion.bash.inc ] && . ~/google-cloud-sdk/completion.bash.inc
 
