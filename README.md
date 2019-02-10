@@ -11,7 +11,7 @@ Primarily, this repo holds my Bash, Vim, Ruby, and Python settings. Eventually, 
 
 Link all of the dotfiles into your home directory. Do this after every pull. For example:
 ```bash
-find ~/workspace/dotfiles -type f \( -name '.*' ! -name '.git' \) -exec ln {} ~ \;
+find ~/workspace/dotfiles \( -type d -or -type f \) \( -name '.*' ! -name '.git' \) -exec ln {} ~ \;
 ```
 
 Ensure ~/.bash_profile is linked to the repo, especially, if you've "sprout wrapped" your environment. Fork & merge if necessary.
