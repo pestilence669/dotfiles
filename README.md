@@ -20,11 +20,3 @@ To get Python's CLI readline tab autocompletion working in Mavericks, you might 
 ```bash
 brew install readline python
 ```
-
-### External software
-
-[Pry REPL](http://pryrepl.org/)
-
-```bash
-gem install pry awesome_print
-```
