@@ -34,3 +34,4 @@ for p in "$PREFIX" "$PREFIX/local"; do
 done
 [ -f ~/google-cloud-sdk/completion.bash.inc ] && . ~/google-cloud-sdk/completion.bash.inc
 
+export GPG_TTY=$(tty)
