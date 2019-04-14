@@ -15,8 +15,3 @@ find ~/workspace/dotfiles \( -type d -or -type f \) \( -name '.*' ! -name '.git'
 ```
 
 Ensure ~/.bash_profile is linked to the repo, especially, if you've "sprout wrapped" your environment. Fork & merge if necessary.
-
-To get Python's CLI readline tab autocompletion working in Mavericks, you might need to do this:
-```bash
-brew install readline python
-```

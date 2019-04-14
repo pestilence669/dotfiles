@@ -52,8 +52,13 @@
 [user]
 	email = pestilence669@users.noreply.github.com
 	name = Paul Chandler
+	signingkey = BF354CCA05622D7FB1BF3E97900B4E5418365FE0
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
+[commit]
+	gpgsign = true
