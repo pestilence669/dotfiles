@@ -125,3 +125,5 @@ if has("gui_running")
 	set guioptions=egmrt
 endif
 
+" use system clipboard
+set clipboard=unnamed
