@@ -34,4 +34,8 @@ for p in "$PREFIX" "$PREFIX/local"; do
 done
 [ -f ~/google-cloud-sdk/completion.bash.inc ] && . ~/google-cloud-sdk/completion.bash.inc
 
+# GPG / signing Git commits
 export GPG_TTY=$(tty)
+
+# rbenv... yeah
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
