@@ -39,3 +39,7 @@ export GPG_TTY=$(tty)
 
 # rbenv... yeah
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Rust
+[ -d "$HOME/.cargo/bin" ] && export PATH="$HOME/.cargo/bin:$PATH"
+
