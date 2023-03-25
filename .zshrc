@@ -24,7 +24,7 @@ fi
 
 alias ll='ls -lah'
 alias l='ls -lh'
-alias tf='jupyter-notebook ~/tf'
+alias tf='cd ~/tf && jupyter-notebook ~/tf'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
