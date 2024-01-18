@@ -52,7 +52,7 @@
 [user]
 	email = pestilence669@users.noreply.github.com
 	name = Paul Chandler
-	signingkey = BF354CCA05622D7FB1BF3E97900B4E5418365FE0
+	signingkey = C28A5B0E284CFC9DD01E9291F3F62CF4EEB19B1F
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
